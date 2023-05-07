@@ -9,4 +9,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="SaveButton">Сохранить</string>
+    <string name="AddMoreSettings">+</string>
+    <string name="mySalary">Мой оклад</string>
+    <string name="From">С</string>
+    <string name="To">До</string>
+    <string name="equals">Равен</string>
+    <string name="worked">Я отработал(-а)</string>
 </resources>
