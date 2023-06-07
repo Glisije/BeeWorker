@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
-        android:id="@+id/home"
-        android:title="Home" />
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_profile" />
+
     <item
-        android:id="@+id/message"
-        android:title="Message" />
+        android:id="@+id/navigation_setDay"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_setDay" />
+
     <item
-        android:id="@+id/settings"
-        android:title="Setting" />
+        android:id="@+id/navigation_setSalary"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_setSalary" />
+
 </menu>

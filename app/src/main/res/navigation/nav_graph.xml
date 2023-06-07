@@ -2,27 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_setDay">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.myapplication.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/navigation_profile"
+        android:name="com.glisije.clearsalary.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.myapplication.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/navigation_setDay"
+        android:name="com.glisije.clearsalary.ui.setDay.SetDayFragment"
+        android:label="@string/title_setDay"
+        tools:layout="@layout/fragment_setday" />
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+    <fragment
+        android:id="@+id/navigation_setSalary"
+        android:name="com.glisije.clearsalary.ui.setSalary.SetSalaryFragment"
+        android:label="@string/title_setSalary"
+        tools:layout="@layout/fragment_setsalary" />
 </navigation>
