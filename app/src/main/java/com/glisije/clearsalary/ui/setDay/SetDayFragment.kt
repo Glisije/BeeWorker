@@ -58,25 +58,32 @@ class SetDayFragment : Fragment() {
         }
 
         binding.startTimeButton.setOnClickListener(View.OnClickListener {
-            TimePickerDialog(
+            val tmd = TimePickerDialog(
                 this.context,
                 timePickerStart,
                 calendarInSetDayStart.get(Calendar.HOUR_OF_DAY),
                 calendarInSetDayStart.get(Calendar.MINUTE),
                 true
-            ).show()
-            updateView1()
+            )
+
+            tmd.show()
+            tmd.setOnCancelListener {
+                updateView1()
+            }
         })
 
         binding.endTimeButton.setOnClickListener(View.OnClickListener {
-            TimePickerDialog(
+            val tmd = TimePickerDialog(
                 this.context,
                 timePickerStop,
                 calendarInSetDayStop.get(Calendar.HOUR_OF_DAY),
                 calendarInSetDayStop.get(Calendar.MINUTE),
                 true
-            ).show()
-            updateView2()
+            )
+            tmd.show()
+            tmd.setOnCancelListener {
+                updateView2()
+            }
         })
 
         binding.SaveTodayButton.setOnClickListener(View.OnClickListener {
