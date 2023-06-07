@@ -1,19 +1,14 @@
 <resources>
-    <string name="app_name">BeeWorker</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="SaveButton">Сохранить</string>
-    <string name="AddMoreSettings">+</string>
+    <string name="app_name">ClearSalary</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_setDay">Работа</string>
+    <string name="title_setSalary">Настройки</string>
+    <string name="worked">Отработал(-а)</string>
+    <string name="from">С</string>
+    <string name="to">До</string>
     <string name="mySalary">Мой оклад</string>
-    <string name="From">С</string>
-    <string name="To">До</string>
+    <string name="SaveButton">Сохранить</string>
     <string name="equals">Равен</string>
-    <string name="worked">Я отработал(-а)</string>
+    <string name="AddMoreSettings">Добавить</string>
+    <string name="formatted_time">%02d:%02d</string>
 </resources>
