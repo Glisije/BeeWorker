@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.myapplication'
+    namespace 'com.glisije.clearsalary'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.myapplication"
+        applicationId "com.glisije.clearsalary"
         minSdk 26
         targetSdk 33
         versionCode 1

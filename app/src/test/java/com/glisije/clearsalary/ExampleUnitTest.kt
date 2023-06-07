@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.glisije.clearsalary
 
 import org.junit.Test
 

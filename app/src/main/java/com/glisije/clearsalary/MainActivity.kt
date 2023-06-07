@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.glisije.clearsalary
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
