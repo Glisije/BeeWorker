@@ -67,7 +67,7 @@ class SetDayFragment : Fragment() {
             )
 
             tmd.show()
-            tmd.setOnCancelListener {
+            tmd.setOnDismissListener {
                 updateView1()
             }
         })
@@ -81,7 +81,7 @@ class SetDayFragment : Fragment() {
                 true
             )
             tmd.show()
-            tmd.setOnCancelListener {
+            tmd.setOnDismissListener {
                 updateView2()
             }
         })
@@ -90,6 +90,31 @@ class SetDayFragment : Fragment() {
             calendarAndTimeData()
             saveSalary()
         })
+
+
+        //        binding.startTimeButton.setOnClickListener(View.OnClickListener {
+//            TimePickerDialog(
+//                this.context,
+//                timePickerStart,
+//                calendarInSetDayStart.get(Calendar.HOUR_OF_DAY),
+//                calendarInSetDayStart.get(Calendar.MINUTE),
+//                true
+//            ).show()
+//                updateView1()
+//        })
+//
+//        binding.endTimeButton.setOnClickListener(View.OnClickListener {
+//            TimePickerDialog(
+//                this.context,
+//                timePickerStop,
+//                calendarInSetDayStop.get(Calendar.HOUR_OF_DAY),
+//                calendarInSetDayStop.get(Calendar.MINUTE),
+//                true
+//            ).show()
+//            updateView2()
+//        })
+
+
     }
 
     private fun updateView1() {
