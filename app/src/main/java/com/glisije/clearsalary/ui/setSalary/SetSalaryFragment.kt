@@ -55,6 +55,13 @@ class SetSalaryFragment : Fragment() {
 //        scrollView.post {
 //            scrollView.fullScroll(View.FOCUS_DOWN)
 //        }
+
+
+        CoroutineScope(Dispatchers.IO).launch {
+            println((requireActivity() as MainActivity).database.dayOfWorkDao().getAllDaysOfWork())
+            println((requireActivity() as MainActivity).database.moneyForTimeDao().getAllMoneyForTime())
+        }
+
         var listOfSalaryForMoney: List<MoneyForTime> = listOf()
 
         CoroutineScope(Dispatchers.IO).launch {
@@ -110,9 +117,11 @@ class SetSalaryFragment : Fragment() {
                 )
                 CoroutineScope(Dispatchers.IO).launch {
                     (requireActivity() as MainActivity).database.moneyForTimeDao().insert(moneyForTime)
+                    println((requireActivity() as MainActivity).database.moneyForTimeDao().getAllMoneyForTime())
                 }
             }
         }
+
 
 //        val textView: TextView = binding.textNotifications
 //        setSalaryViewModel.text.observe(viewLifecycleOwner) {

@@ -3,7 +3,6 @@ package com.glisije.clearsalary
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -12,7 +11,9 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
 import com.glisije.clearsalary.Data.MyAppDatabase
 import com.glisije.clearsalary.databinding.ActivityMainBinding
-import com.glisije.clearsalary.ui.setDay.SetDayFragment
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,5 +47,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        CoroutineScope(Dispatchers.IO).launch {
+
+        database.dayOfWorkDao().deleteAllFromTable()
+        database.moneyForTimeDao().deleteAllFromTable()}
     }
 }

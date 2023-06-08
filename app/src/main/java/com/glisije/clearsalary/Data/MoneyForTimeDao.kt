@@ -1,13 +1,10 @@
 package com.glisije.clearsalary.Data
 
-import android.content.Context
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 @Dao
 interface MoneyForTimeDao {
@@ -23,5 +20,6 @@ interface MoneyForTimeDao {
     @Query("DELETE FROM money_for_time_table WHERE id = :id")
     fun deleteById(id: Long)
 
-    // Other DAO methods...
+    @Query("DELETE FROM money_for_time_table")
+    fun deleteAllFromTable()
 }

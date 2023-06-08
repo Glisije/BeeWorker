@@ -10,18 +10,18 @@
         android:id="@+id/addSalaryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/AddMoreSettings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/saveSalaryButton"
-        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/saveSalaryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/SaveButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,10 +32,11 @@
         android:id="@+id/deleteSalaryButton"
         android:layout_width="125dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/saveSalaryButton" />
 
     <ScrollView

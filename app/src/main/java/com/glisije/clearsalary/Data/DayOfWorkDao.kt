@@ -23,6 +23,9 @@ interface DayOfWorkDao {
 
     @Delete
     fun deleteDayOfWork(dayOfWork: DayOfWork): Int
+
+    @Query("DELETE FROM money_for_time_table")
+    fun deleteAllFromTable()
 }
 
 

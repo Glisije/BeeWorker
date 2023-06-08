@@ -24,10 +24,4 @@ data class DayOfWork(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
 
-    suspend fun insertDayOfWorkToDatabase(dayOfWork: DayOfWork, context: Context?) {
-        context ?: return // Handle null context if needed
-
-        val database = MyAppDatabase.getDayOfWorkDao(context)
-        database.dayOfWorkDao().insertDayOfWork(dayOfWork)
-    }
 }

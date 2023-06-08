@@ -26,6 +26,8 @@ class SetDayFragment : Fragment() {
     private val calendarInSetDayStop = Calendar.getInstance()
     private var todaySalary = 0
     private var todayTime = 0
+    var listOfMoneyForTime: List<MoneyForTime> = listOf()
+
 //    private var myAppDatabase =
 
     // This property is only valid between onCreateView and
@@ -41,6 +43,14 @@ class SetDayFragment : Fragment() {
 
         _binding = FragmentSetdayBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+
+        CoroutineScope(Dispatchers.IO).launch {
+            println((requireActivity() as MainActivity).database.dayOfWorkDao().getAllDaysOfWork())
+            println((requireActivity() as MainActivity).database.moneyForTimeDao().getAllMoneyForTime())
+        }
+
+
 
         setClickListeners()
 
@@ -90,6 +100,7 @@ class SetDayFragment : Fragment() {
             calendarAndTimeData()
             saveSalary()
         })
+
 
 
         //        binding.startTimeButton.setOnClickListener(View.OnClickListener {
@@ -146,7 +157,6 @@ class SetDayFragment : Fragment() {
     }
 
     private fun calculateSalary() {
-        var listOfMoneyForTime: List<MoneyForTime> = listOf()
         CoroutineScope(Dispatchers.IO).launch {
             listOfMoneyForTime =
                 (requireActivity() as MainActivity).database.moneyForTimeDao().getAllMoneyForTime()
@@ -209,15 +219,22 @@ class SetDayFragment : Fragment() {
             calendarAndTimeData()
 
         CoroutineScope(Dispatchers.IO).launch {
-            insertDayOfWork(
-                DayOfWork(
-                    todayTime,
-                    calendarInSetDayStop,
-                    calendarInSetDayStop,
-                    todaySalary
-                ),
-                requireContext()
-            )
+            (requireActivity() as MainActivity).database.dayOfWorkDao().insertDayOfWork(dayOfWork = DayOfWork(
+                todayTime,
+                calendarInSetDayStart,
+                calendarInSetDayStop,
+                todaySalary
+            ))
+
+//            insertDayOfWork(
+//                DayOfWork(
+//                    todayTime,
+//                    calendarInSetDayStop,
+//                    calendarInSetDayStop,
+//                    todaySalary
+//                ),
+//                requireContext()
+//            )
         }
     }
 
